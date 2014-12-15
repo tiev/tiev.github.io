@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+    
+
+    <title>Ruby Discovery</title>
+    <generator uri="https://github.com/jekyll/jekyll">Jekyll v2.5.1</generator>
+		<icon>http://localhost:4000/apple-touch-icon-precomposed.png</icon>
+    <subtitle>A Channel on Ruby Programming</subtitle>
+    <link href="http://localhost:4000/atom.xml" rel="self"/>
+    <link href="http://localhost:4000/" rel="alternate" type="text/html"/>
+    <updated>2014-12-15T20:05:13+07:00</updated>
+    <id>http://localhost:4000/</id>
+    <author>
+			<name>Viet</name>
+			<uri>http://localhost:4000/</uri>
+			<email>phuocviet89@gmail.com</email>
+		</author>
+
+    
+</feed>
