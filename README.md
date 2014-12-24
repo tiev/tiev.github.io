@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/tiev/tiev.github.io.png?label=ready&title=Ready)](https://waffle.io/tiev/tiev.github.io)
 # Skinny Bones Jekyll Starter
 
 Just a little something I'm using to jump start a site refresh. I like to think of it as a starter for building your own Jekyll site. I purposely keep the styling minimal and bare to make it easier to add your own flare and markup.
