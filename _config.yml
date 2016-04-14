@@ -39,7 +39,8 @@ rdiscount:
     - autolink
     - footnotes
     - smart
-highlighter: pygments # default python pygments have been replaced by pygments.rb
+#highlighter: pygments # default python pygments have been replaced by pygments.rb
+highlighter: rouge # Fix highlighting as described here: https://help.github.com/articles/page-build-failed-config-file-error/#fixing-highlighting-errors
 
 paginate: 10          # Posts per page on the blog index
 paginate_path: "posts/:num"  # Directory base for pagination URLs eg. /posts/2/
