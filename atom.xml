@@ -4,7 +4,7 @@
   <title><![CDATA[Ruby Discovery]]></title>
   <link href="http://tiev.github.io/atom.xml" rel="self"/>
   <link href="http://tiev.github.io/"/>
-  <updated>2017-03-03T11:46:14+07:00</updated>
+  <updated>2017-03-03T14:32:49+07:00</updated>
   <id>http://tiev.github.io/</id>
   <author>
     <name><![CDATA[tiev]]></name>
@@ -12,6 +12,58 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Easy Get Your Home External IP]]></title>
+    <link href="http://tiev.github.io/blog/2017/03/03/easy-get-your-home-external-ip/"/>
+    <updated>2017-03-03T11:49:25+07:00</updated>
+    <id>http://tiev.github.io/blog/2017/03/03/easy-get-your-home-external-ip</id>
+    <content type="html"><![CDATA[<p>To get your external IP:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>curl api.ipify.org
+</span><span class='line'>123.123.123.123
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Script to update IP:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">ip</span><span class="o">=</span><span class="k">$(</span>curl api.ipify.org<span class="k">)</span>
+</span><span class='line'>touch <span class="s1">&#39;current.ip&#39;</span>
+</span><span class='line'><span class="nv">current</span><span class="o">=</span><span class="k">$(</span>cat current.ip<span class="k">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;$ip&quot;</span> !<span class="o">=</span> <span class="s2">&quot;$current&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span><span class='line'>  curl -X POST -H <span class="s1">&#39;Content-type: application/json&#39;</span> --data <span class="s2">&quot;{\&quot;text\&quot;:\&quot;$ip\&quot;}&quot;</span> url_to_Slack_app_integration
+</span><span class='line'>  <span class="nb">echo</span> <span class="s2">&quot;$ip&quot;</span> &gt; <span class="s1">&#39;current.ip&#39;</span>
+</span><span class='line'><span class="k">fi</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Add script to cron:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>sudo chmod +x myip.sh
+</span><span class='line'>crontab -e
+</span><span class='line'>
+</span><span class='line'><span class="m">15</span> * * * * path_to_script_file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Done!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[First Look at AWS Lambda Service]]></title>
