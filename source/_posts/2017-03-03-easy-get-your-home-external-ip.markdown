@@ -21,7 +21,7 @@ ip=$(curl api.ipify.org)
 touch 'current.ip'
 current=$(cat current.ip)
 
-if [ "$ip" != "$current" ]; then
+if [ -n "$ip" ] && [ "$ip" != "$current" ]; then
   curl -X POST -H 'Content-type: application/json' --data "{\"text\":\"$ip\"}" url_to_Slack_app_integration
   echo "$ip" > 'current.ip'
 fi
